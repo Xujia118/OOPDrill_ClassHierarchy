@@ -3,9 +3,9 @@ from Session import Session
 from student_list import student_list
 import random
 
-students = []
-
 def populate_students(students_list):
+    students = []
+
     # Set some students as full time, arbitrarily the first 13 students
     for i in range(0, 13):
         name = students_list[i]
@@ -14,13 +14,14 @@ def populate_students(students_list):
         student.exam_score = [random.randint(60, 100) for _ in range(2)]
         students.append(student)
 
-    # Set some students as part time, arbitrarily the 7 last students
+    # Set some students as part time, arbitrarily the last 7 students
     for i in range(13, 20):
         name = students_list[i]
         student = PartTimeStudent(name)
         student.quiz_score = [random.randint(60, 100) for _ in range(15)]
         students.append(student)
 
+    # Every item in the list is a student object
     return students
 
 if __name__ == '__main__':
@@ -38,7 +39,7 @@ if __name__ == '__main__':
     for name, quiz_score in sorted_average_score:
         print(name, quiz_score)
 
-    # Print part time students
+    # Print part time student names
     part_time_students = session.check_status(students)
     for student in part_time_students:
         print(student)

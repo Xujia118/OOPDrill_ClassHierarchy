@@ -1,0 +1,22 @@
+student_list = [
+    "Alice",
+    "Bob",
+    "Charlie",
+    "David",
+    "Eva",
+    "Frank",
+    "Grace",
+    "Hannah",
+    "Isaac",
+    "Jane",
+    "Katherine",
+    "Liam",
+    "Mia",
+    "Noah",
+    "Olivia",
+    "Peter",
+    "Quinn",
+    "Rachel",
+    "Samuel",
+    "Taylor"
+]
